@@ -1,4 +1,4 @@
 package interfaces;
 
-public class Riproducibile {
+public interface Riproducibile {
 }
