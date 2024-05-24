@@ -1,6 +1,8 @@
 package entities;
 
-public class Immagine extends ElementoMultimediale {
+import interfaces.Luminosita;
+
+public class Immagine extends ElementoMultimediale implements Luminosita {
     private int luminosita;
 
     public Immagine(String titolo, int luminosita) {
@@ -8,10 +10,12 @@ public class Immagine extends ElementoMultimediale {
         this.luminosita = luminosita;
     }
 
+    @Override
     public void aumentaLuminosita() {
         luminosita++;
     }
 
+    @Override
     public void diminuisciLuminosita() {
         luminosita--;
     }

@@ -1,8 +1,9 @@
 package entities;
 
+import interfaces.Luminosita;
 import interfaces.Riproducibile;
 
-public class Video extends ElementoMultimediale implements Riproducibile {
+public class Video extends ElementoMultimediale implements Riproducibile, Luminosita {
     private int durata;
     private int volume;
     private int luminosita;
@@ -14,26 +15,31 @@ public class Video extends ElementoMultimediale implements Riproducibile {
         this.luminosita = luminosita;
     }
 
-    public void abbassaVolume() {
-        volume--;
-    }
-
-    public void alzaVolume() {
-        volume++;
-    }
-
-    public void aumentaLuminosita() {
-        luminosita++;
-    }
-
-    public void diminuisciLuminosita() {
-        luminosita--;
-    }
 
     @Override
     public void play() {
         for (int i = 0; i < durata; i++) {
             System.out.println(titolo + "!".repeat(volume) + "*".repeat(luminosita));
         }
+    }
+
+    @Override
+    public void abbassaVolume() {
+        volume--;
+    }
+
+    @Override
+    public void alzaVolume() {
+        volume++;
+    }
+
+    @Override
+    public void aumentaLuminosita() {
+        luminosita++;
+    }
+
+    @Override
+    public void diminuisciLuminosita() {
+        luminosita--;
     }
 }

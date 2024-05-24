@@ -12,13 +12,6 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
         this.volume = volume;
     }
 
-    public void abbassaVolume() {
-        volume--;
-    }
-
-    public void alzaVolume() {
-        volume++;
-    }
 
     @Override
     public void play() {
@@ -27,4 +20,15 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
 
         }
     }
+
+    @Override
+    public void abbassaVolume() {
+        volume--;
+    }
+
+    @Override
+    public void alzaVolume() {
+        volume++;
+    }
+
 }
